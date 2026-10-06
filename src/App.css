@@ -1,0 +1,95 @@
+.app {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 100px;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding-bottom: 2rem;
+    padding-left: 280px;
+  }
+}
+
+.page-container {
+  min-height: calc(100vh - 100px);
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    max-width: 1400px;
+    padding: 3rem 4rem;
+  }
+}
+
+.page-container.chat-page {
+  padding: 0;
+  max-width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.page-container.chat-page > div {
+  height: 100%;
+}
+
+.page-container.therapist-page {
+  max-width: 100%;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .therapist-page {
+    max-width: 1600px;
+  }
+}
+
+/* Loading container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

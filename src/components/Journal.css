@@ -1,0 +1,451 @@
+.journal-container {
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Header */
+.journal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.journal-header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 4px;
+}
+
+.journal-header p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.entry-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 16px;
+  background: var(--primary-100);
+  border-radius: var(--radius-lg);
+}
+
+.entry-count span:first-child {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-600);
+}
+
+.entry-count span:last-child {
+  font-size: 0.7rem;
+  color: var(--primary-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tab Navigation */
+.tab-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 4px;
+  background: var(--neutral-100);
+  border-radius: var(--radius-full);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Write Section */
+.write-section {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-2xl);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--neutral-100);
+}
+
+/* Prompts Section */
+.prompts-section h3 {
+  font-size: 1.1rem;
+  margin: 0 0 16px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.prompts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.prompt-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 16px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--neutral-200);
+  transition: all 0.2s ease;
+}
+
+.prompt-card:hover {
+  border-color: var(--primary-300);
+  background: var(--primary-50);
+  transform: translateY(-2px);
+}
+
+.prompt-emoji {
+  font-size: 1.75rem;
+}
+
+.prompt-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.free-write-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--accent-400), var(--accent-500));
+  color: white;
+  font-weight: 600;
+  box-shadow: var(--shadow-green);
+  transition: all 0.2s ease;
+}
+
+.free-write-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Writing Area */
+.writing-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.selected-prompt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--primary-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--primary-200);
+  font-size: 0.9rem;
+  color: var(--primary-700);
+}
+
+.selected-prompt span:last-of-type {
+  flex: 1;
+}
+
+.selected-prompt button {
+  color: var(--primary-400);
+  font-size: 1rem;
+}
+
+.title-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-200);
+  background: var(--bg-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.title-input:focus {
+  border-color: var(--primary-300);
+  box-shadow: 0 0 0 3px var(--primary-50);
+}
+
+.title-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.content-input {
+  width: 100%;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-200);
+  background: var(--bg-primary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  resize: none;
+  min-height: 200px;
+  transition: all 0.2s ease;
+}
+
+.content-input:focus {
+  border-color: var(--primary-300);
+  box-shadow: 0 0 0 3px var(--primary-50);
+}
+
+.content-input::placeholder {
+  color: var(--text-muted);
+}
+
+.writing-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 14px 24px;
+  border-radius: var(--radius-full);
+  background: var(--neutral-100);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.cancel-btn:hover {
+  background: var(--neutral-200);
+}
+
+.save-btn {
+  flex: 2;
+  padding: 14px 24px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+  color: white;
+  font-weight: 600;
+  box-shadow: var(--shadow-purple);
+  transition: all 0.2s ease;
+}
+
+.save-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -10px rgba(147, 51, 234, 0.4);
+}
+
+.save-btn:disabled {
+  background: var(--neutral-300);
+  box-shadow: none;
+}
+
+/* Entries Section */
+.entries-section {
+  /* Container for entries */
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-2xl);
+  border: 2px dashed var(--neutral-200);
+}
+
+.empty-emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+}
+
+.start-writing-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+  color: white;
+  font-weight: 600;
+  box-shadow: var(--shadow-purple);
+}
+
+.start-writing-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Entries List */
+.entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.entry-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-100);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.entry-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.entry-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.entry-sentiment {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.entry-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.entry-meta h4 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.entry-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.entry-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.edit-btn,
+.delete-trigger {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background: var(--neutral-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+  background: var(--primary-100);
+}
+
+.delete-trigger:hover {
+  background: #fee2e2;
+}
+
+.entry-prompt {
+  font-size: 0.85rem;
+  color: var(--primary-600);
+  margin: 0 0 10px;
+  padding: 8px 12px;
+  background: var(--primary-50);
+  border-radius: var(--radius-md);
+  overflow-wrap: anywhere;
+}
+
+.entry-content {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Delete Confirmation */
+.delete-confirm {
+  text-align: center;
+  padding: 8px;
+}
+
+.delete-confirm p {
+  margin: 0 0 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.confirm-actions button {
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+.confirm-actions button:first-child {
+  background: var(--neutral-100);
+  color: var(--text-secondary);
+}
+
+.delete-btn {
+  background: #dc2626 !important;
+  color: white !important;
+}
+
+@media (max-width: 400px) {
+  .journal-container {
+    padding: 16px;
+  }
+  
+  .write-section {
+    padding: 20px 16px;
+  }
+  
+  .prompts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .writing-actions {
+    flex-direction: column;
+  }
+  
+  .cancel-btn,
+  .save-btn {
+    flex: 1;
+  }
+}
